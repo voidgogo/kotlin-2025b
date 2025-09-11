@@ -29,6 +29,7 @@ class MainActivity : ComponentActivity() {
         }
         week02Variables()
         week02Functions()
+        week02Classes()
     }
 }
 
@@ -90,6 +91,34 @@ private fun week02Functions() {
     println("Sum: ${add(5, -71)}")
     introduce("Alice")
     introduce("Bob", 21)
+}
+
+private fun week02Classes() {
+    println("=== Kotlin Classes ===")
+
+    // 기본 클래스
+    class Student {
+        var name: String = ""
+        var age: Int = 0
+
+        fun introduce() {
+            println("Hi, I'm $name and I'm $age years old")
+        }
+    }
+
+    val student = Student()
+    student.name = "Alice"
+    student.age = 20
+    student.introduce()
+
+    // 데이터 클래스
+    data class Person(val name: String, val age: Int)
+
+    val person1 = Person("Bob", 25)
+    val person2 = Person("Bob", 25)
+
+    println("Person1: $person1")
+    println("Equal? ${person1 == person2}")
 }
 
 @Composable
