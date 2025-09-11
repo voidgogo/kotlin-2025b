@@ -32,13 +32,33 @@ class MainActivity : ComponentActivity() {
 }
 
 private fun week02Variables() {
-    println("=== Week 2: Variables ===")
+//    println("=== Week 2: Variables ===")
+//
+//    val courseName = "Mobile Programming"
+//    var week = 2
+//
+//    println("Course: $courseName")
+//    println("Week: $week")
 
-    val courseName = "Mobile Programming"
-    var week = 2
+    // 변수 선언과 타입
+    println("=== Kotlin Variables ===")
 
-    println("Course: $courseName")
-    println("Week: $week")
+    // val (불변) vs var (가변)
+    val name = "Android"
+    var version = 14
+    println("Hello $name $version")
+
+    // 타입 명시
+    val age: Int = 25
+    val height: Double = 175.5
+    val isStudent: Boolean = true
+
+    println("Age: $age, Height: $height, Student: $isStudent")
+
+    // 널 허용 타입
+    var nickname: String? = null
+    nickname = "Kim"
+    println("Nickname: ${nickname?.length}")
 }
 
 
