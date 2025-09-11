@@ -30,6 +30,7 @@ class MainActivity : ComponentActivity() {
         week02Variables()
         week02Functions()
         week02Classes()
+        week02Collections()
     }
 }
 
@@ -119,6 +120,32 @@ private fun week02Classes() {
 
     println("Person1: $person1")
     println("Equal? ${person1 == person2}")
+}
+
+private fun week02Collections(){
+    // 컬렉션
+    println("=== Kotlin Collections ===")
+
+    // 리스트
+    val fruits = listOf("apple", "banana", "orange")
+    val mutableFruits = mutableListOf("apple", "banana")
+
+    println("Fruits: $fruits")
+    mutableFruits.add("grape")
+    println("Mutable fruits: $mutableFruits")
+
+    // 맵
+    val scores = mapOf("Alice" to 95, "Bob" to 87, "Charlie" to 92)
+    println("Scores: $scores")
+
+    // 반복문
+    for (fruit in fruits) {
+        println("I like $fruit")
+    }
+
+    scores.forEach { (name, score) ->
+        println("$name scored $score")
+    }
 }
 
 @Composable
