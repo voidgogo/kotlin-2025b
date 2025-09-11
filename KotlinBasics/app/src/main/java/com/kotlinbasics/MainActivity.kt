@@ -63,11 +63,33 @@ private fun week02Variables() {
 }
 
 private fun week02Functions() {
-    println("=== Week 2: Functions ===")
+//    println("=== Week 2: Functions ===")
+//
+//    fun greet(name: String) = "Hello, $name!"
+//
+//    println(greet("Android Developer"))
 
-    fun greet(name: String) = "Hello, $name!"
+    // 함수 정의와 사용
+    println("=== Kotlin Functions ===")
 
-    println(greet("Android Developer"))
+    // 기본 함수
+    fun greet(name: String): String {
+        return "Hello, $name!"
+    }
+
+    // 단일 표현식 함수
+    fun add(a: Int, b: Int) = a + b
+
+    // 기본 매개변수
+    fun introduce(name: String, age: Int = 20) {
+        println("My name is $name and I'm $age years old")
+    }
+
+    // 함수 호출
+    println(greet("Kotlin"))
+    println("Sum: ${add(5, -71)}")
+    introduce("Alice")
+    introduce("Bob", 21)
 }
 
 @Composable
