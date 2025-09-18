@@ -29,8 +29,8 @@ class MainActivity : ComponentActivity() {
         }
         week02Variables()
         week02Functions()
-        week02Classes()
-        week02Collections()
+        week03Classes()
+        week03Collections()
     }
 }
 
@@ -38,29 +38,29 @@ private fun week02Variables() {
 //    println("=== Week 2: Variables ===")
 //
 //    val courseName = "Mobile Programming"
-//    var week = 2
+//    var week = 1
 //
 //    println("Course: $courseName")
 //    println("Week: $week")
 
-    // 변수 선언과 타입
+// 변수 선언과 타입
     println("=== Kotlin Variables ===")
 
-    // val (불변) vs var (가변)
+// val (불변) vs var (가변)
     val name = "Android"
     var version = 14
     println("Hello $name $version")
 
-    // 타입 명시
+// 타입 명시
     val age: Int = 25
     val height: Double = 175.5
     val isStudent: Boolean = true
 
     println("Age: $age, Height: $height, Student: $isStudent")
 
-    // 널 허용 타입
+// 널 허용 타입
     var nickname: String? = null
-    nickname = "Kim"
+    nickname = "Andy"
     println("Nickname: ${nickname?.length}")
 }
 
@@ -87,14 +87,14 @@ private fun week02Functions() {
         println("My name is $name and I'm $age years old")
     }
 
-    // 함수 호출
+// 함수 호출
     println(greet("Kotlin"))
-    println("Sum: ${add(5, -71)}")
+    println("Sum: ${add(5, 3)}")
     introduce("Alice")
-    introduce("Bob", 21)
+    introduce("Bob", 25)
 }
 
-private fun week02Classes() {
+private fun week03Classes() {
     println("=== Kotlin Classes ===")
 
     // 기본 클래스
@@ -122,11 +122,9 @@ private fun week02Classes() {
     println("Equal? ${person1 == person2}")
 }
 
-private fun week02Collections(){
-    // 컬렉션
+private fun week03Collections(){
     println("=== Kotlin Collections ===")
 
-    // 리스트
     val fruits = listOf("apple", "banana", "orange")
     val mutableFruits = mutableListOf("apple", "banana")
 
@@ -134,11 +132,11 @@ private fun week02Collections(){
     mutableFruits.add("grape")
     println("Mutable fruits: $mutableFruits")
 
-    // 맵
+// 맵
     val scores = mapOf("Alice" to 95, "Bob" to 87, "Charlie" to 92)
     println("Scores: $scores")
 
-    // 반복문
+// 반복문
     for (fruit in fruits) {
         println("I like $fruit")
     }
